@@ -17,13 +17,7 @@ function addCharacter() {
   document.getElementById(character).classList.add('active');
   document
     .getElementById(character)
-    ?.setAttribute('data-bs-toggle', 'offcanvas');
-  document
-    .getElementById(character)
-    ?.setAttribute('data-bs-target', '#offcanvasRight');
-  document
-    .getElementById(character)
-    ?.setAttribute('aria-controls', 'offcanvasRight');
+    ?.setAttribute('onclick', 'openPlayerDetails();');
   document.getElementById(character)?.insertAdjacentHTML(
     'beforeend',
     `<div
@@ -48,10 +42,9 @@ function addCharacter() {
 function addEnemy() {
   const character = 'house-15';
   document.getElementById(character).classList.add('active');
-  document.getElementById(character)?.setAttribute('data-bs-toggle', 'modal');
   document
     .getElementById(character)
-    ?.setAttribute('data-bs-target', '#exampleModal');
+    ?.setAttribute('onclick', 'openEnemyDetails();');
   document.getElementById(character)?.insertAdjacentHTML(
     'beforeend',
     `<div
@@ -171,7 +164,7 @@ function addSkill() {
     document.getElementById('skill').insertAdjacentHTML(
       'beforeend',
       `<div class="col separate-column">
-          <div class="skill skill-${index + 1}">
+          <div class="skill skill-${index + 1}" onclick="useSkill();">
             <div class="skill-bg">
               <div class="progress house-bar fury-bg">
                 <div
@@ -188,6 +181,51 @@ function addSkill() {
       </div>`
     );
   }
+}
+
+function openPlayerDetails() {
+  showLoading();
+  const interval = setInterval(() => {
+    const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasRight');
+    bsOffcanvas.show();
+    hideLoading();
+    clearInterval(interval);
+  }, 100);
+}
+
+function openEnemyDetails() {
+  showLoading();
+  const interval = setInterval(() => {
+    const myModal = new bootstrap.Modal('#exampleModal');
+    myModal.show();
+    hideLoading();
+    clearInterval(interval);
+  }, 100);
+}
+
+function useSkill() {
+  showLoading();
+  const interval = setInterval(() => {
+    const myModal = bootstrap.Modal.getInstance(
+      document.getElementById('exampleModal')
+    );
+    myModal.hide();
+    hideLoading();
+    clearInterval(interval);
+    showDamage();
+  }, 100);
+}
+
+function showDamage() {
+  showBlock();
+  const character = 'house-15';
+  addHoverBar(character);
+  const shieldInterval = setInterval(() => {
+    document.querySelectorAll(`#${character} .house-bar`)[0].style.width =
+      '50%';
+    hideBlock();
+    clearInterval(shieldInterval);
+  }, 500);
 }
 
 addEventListener('DOMContentLoaded', event => {

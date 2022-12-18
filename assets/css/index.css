@@ -91,6 +91,11 @@
   height: 7px;
   background-color: gray;
   opacity: 0;
+  -webkit-transition: 300ms linear;
+  -moz-transition: 300ms linear;
+  -o-transition: 300ms linear;
+  -ms-transition: 300ms linear;
+  transition: 300ms linear;
 }
 
 .life-bar {
@@ -114,7 +119,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9;
+  z-index: 1090;
   display: none;
 }
 
