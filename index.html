@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="assets/lib/bootstrap-5.0.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/index.css" />
+  </head>
+  <body class="water-bg">
+    <div class="container">
+      <div class="mt-5"></div>
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <div class="ship-1"></div>
+          <div class="wood"></div>
+          <div class="board" id="board">
+            <!-- <div class="house house-white house-row charles"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Canvas -->
+    <div
+      class="offcanvas offcanvas-end character-battle-bg"
+      tabindex="-1"
+      id="offcanvasRight"
+      aria-labelledby="offcanvasRightLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Monkey D. Luffy (Gear 5)</h5>
+        <button
+          type="button"
+          class="btn-close text-reset close-icon"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <img
+          src="/assets/images/characters/1/large.png"
+          class="img-fluid mb-2"
+          alt="Avatar of character"
+        />
+        <div class="progress position-relative">
+          <div
+            class="progress-bar"
+            role="progressbar"
+            aria-label="Example with label"
+            style="width: 100%"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span
+              class="justify-content-center d-flex position-absolute w-100 text-dark"
+              >100.000/100.000</span
+            >
+          </div>
+        </div>
+        <div class="progress position-relative">
+          <div
+            class="progress-bar bg-danger"
+            role="progressbar"
+            aria-label="Example with label"
+            style="width: 25%"
+            aria-valuenow="25"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <span
+              class="justify-content-center d-flex position-absolute w-100 text-dark"
+              >25.000/100.000</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg enemy-battle-bg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Kaido (Forma humana)
+            </h5>
+            <button
+              type="button"
+              class="btn-close close-icon"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              src="/assets/images/characters/2/large.png"
+              class="img-fluid mb-2"
+              alt="Avatar of character"
+            />
+            <div class="progress position-relative">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                aria-label="Example with label"
+                style="width: 100%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <span
+                  class="justify-content-center d-flex position-absolute w-100 text-dark"
+                  >100.000/100.000</span
+                >
+              </div>
+            </div>
+            <div class="progress position-relative">
+              <div
+                class="progress-bar bg-danger"
+                role="progressbar"
+                aria-label="Example with label"
+                style="width: 25%"
+                aria-valuenow="25"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              >
+                <span
+                  class="justify-content-center d-flex position-absolute w-100 text-dark"
+                  >25.000/100.000</span
+                >
+              </div>
+            </div>
+            <h4 class="mt-5 text-center">
+              Habilidades do Monkey D. Luffy (Gear 5)
+            </h4>
+            <div class="row row-cols-auto" id="skill"></div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary cancel-button"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay">
+      <div class="overlay-text">
+        <div class="spinner-grow text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+    <div class="overlay-block"></div>
+    <script src="assets/lib/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/index.js"></script>
+  </body>
+</html>

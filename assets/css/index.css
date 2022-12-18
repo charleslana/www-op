@@ -1,0 +1,245 @@
+* {
+  outline: 0;
+}
+
+.water-bg {
+  background-image: url('../images/battle/water-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: calc(100vh - 48px);
+}
+
+.ship-1 {
+  background-image: url('../images/battle/ship-bg-1.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1000px;
+  height: 366px;
+  position: absolute;
+  z-index: 2;
+}
+
+.wood {
+  background-image: url('../images/battle/wood-bg.png');
+  background-repeat: repeat;
+  width: 522px;
+  height: 366px;
+  position: absolute;
+  z-index: 1;
+}
+
+.board {
+  width: 522px;
+  height: 366px;
+  border: solid black 0px;
+  position: absolute;
+  z-index: 3;
+}
+
+.house-row {
+  height: 50px !important;
+}
+
+.house {
+  width: 50px;
+  height: 100%;
+  float: left;
+  cursor: pointer;
+  border: solid black 0px;
+  margin: 1px;
+}
+
+.house:hover {
+  border: solid black 1px;
+}
+
+.house:hover:not(.active) {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.house-white {
+  background-color: #cecece;
+  background-color: transparent;
+}
+
+.house-black {
+  background-color: #000;
+}
+
+.house-selected {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.character {
+  background-image: url('../images/characters/1/mini.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.character:hover {
+  width: 48px;
+  height: 48px;
+}
+
+.house-bar {
+  width: 48px;
+  height: 7px;
+  background-color: gray;
+  opacity: 0;
+}
+
+.life-bar {
+  background-color: #ff4167;
+}
+
+.energy-bar {
+  background-color: #285bc8;
+}
+
+.progress {
+  border-radius: 0px;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  display: none;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.spinner-grow {
+  width: 3rem;
+  height: 3rem;
+}
+
+.decoration-battle-bg {
+  background-image: url('../images/battle/decoration-battle-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.character-battle-bg {
+  background-image: url('../images/battle/character-battle-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.character-battle-bg h5 {
+  color: black;
+}
+
+.close-icon {
+  background-image: url('../images/icons/close.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.close-icon:focus {
+  outline: 0px;
+  box-shadow: none !important;
+}
+
+.enemy-battle-bg {
+  background-image: url('../images/battle/enemy-battle-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.enemy-battle-bg .modal-content {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.enemy-battle-bg .modal-header {
+  border-bottom: none;
+}
+
+.enemy-battle-bg .modal-footer {
+  border-top: none;
+}
+
+.skill {
+  background-image: url('../images/skills/1/1.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.separate-column {
+  background-clip: padding-box;
+  border: 10px solid transparent;
+}
+
+.skill-1 {
+  background-image: url('../images/skills/1/1.jpg');
+}
+
+.skill-bg {
+  background-image: url('../images/skills/skill-bg.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+}
+
+.cancel-button {
+  background-image: url('../images/layout/cancel-button.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.cancel-button:focus {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.overlay-block {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  z-index: 9;
+  display: none;
+}
+
+.fury-bg {
+  opacity: 1;
+  border-radius: 3px 3px 0px 0px;
+  margin-left: 1px;
+}
